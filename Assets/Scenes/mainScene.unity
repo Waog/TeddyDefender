@@ -122,7 +122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477422, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11436764, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
       propertyPath: target
@@ -140,10 +140,6 @@ Prefab:
       propertyPath: spawnPoints.Array.data[2]
       value: 
       objectReference: {fileID: 1729124851}
-    - target: {fileID: 11436764, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
-      propertyPath: spawnTime
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
   m_IsPrefabParent: 0
@@ -280,22 +276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!1 &371624698 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 101782, guid: 71582de135aa2aa40a903136cca1968b, type: 2}
-  m_PrefabInternal: {fileID: 392559890}
---- !u!114 &371624701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 371624698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45828641c2e5f3941b350844975006c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_RootOrder: 2
 --- !u!1001 &392559890
 Prefab:
   m_ObjectHideFlags: 0
@@ -339,15 +320,6 @@ Prefab:
       propertyPath: WorldBounds
       value: 
       objectReference: {fileID: 681524333}
-    - target: {fileID: 193096, guid: 71582de135aa2aa40a903136cca1968b, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -7310811918437815874, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 427550, guid: 71582de135aa2aa40a903136cca1968b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71582de135aa2aa40a903136cca1968b, type: 2}
   m_IsPrefabParent: 0
@@ -599,7 +571,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.7928195
+  orthographic size: 3.434569
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

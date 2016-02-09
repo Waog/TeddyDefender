@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class collidingEnemyCounter : MonoBehaviour {
+public class CollidingEnemyCounter : MonoBehaviour {
 
 	private List<Collider2D> inside = new List<Collider2D>();
 

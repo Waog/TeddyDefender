@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   enemyTemplate: {fileID: 103412, guid: 2371c7a34aa5298468d7ba09dc8f9255, type: 2}
-  spawnTime: 5
+  spawnTime: 10
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}

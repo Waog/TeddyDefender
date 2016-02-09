@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8120d3060f2697e4482ec99c2c41dcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   player: {fileID: 0}
   explosion: {fileID: 193540, guid: c5fd52e1a8f4eb945ac4277ff2e435d7, type: 2}
 --- !u!212 &21205506
@@ -521,6 +521,10 @@ Prefab:
       propertyPath: explosion
       value: 
       objectReference: {fileID: 193540, guid: c5fd52e1a8f4eb945ac4277ff2e435d7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103412}
