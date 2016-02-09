@@ -296,6 +296,8 @@ MonoBehaviour:
   speed: 10
   player: {fileID: 0}
   explosion: {fileID: 193540, guid: c5fd52e1a8f4eb945ac4277ff2e435d7, type: 2}
+  MAX_LIFE: 10
+  LIFE_PER_SECOND: 0.4
 --- !u!212 &21205506
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -524,6 +526,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: speed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: MAX_LIFE
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: LIFE_PER_SECOND
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

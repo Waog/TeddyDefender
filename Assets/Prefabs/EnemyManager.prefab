@@ -41,7 +41,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   enemyTemplate: {fileID: 103412, guid: 2371c7a34aa5298468d7ba09dc8f9255, type: 2}
-  spawnTime: 10
+  enemyIndicatorTemplate: {fileID: 161256, guid: e4008625648d00e40ac56f831e1e65f7,
+    type: 2}
+  spawnTime: 2.5
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -52,7 +54,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: enemyIndicatorTemplate
+      value: 
+      objectReference: {fileID: 161256, guid: e4008625648d00e40ac56f831e1e65f7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 115202}

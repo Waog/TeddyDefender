@@ -25,8 +25,6 @@ public class PlayerMobility : MonoBehaviour
 	bool isEnemyInHitZone ()
 	{
 		Transform hitZone = transform.Find ("hitZone");
-		BoxCollider2D playerHitZoneCollider = hitZone.GetComponent<BoxCollider2D> ();
-
 		return hitZone.GetComponent<CollidingEnemyCounter> ().isColliding ();
 	}
 

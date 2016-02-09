@@ -8,8 +8,8 @@ public class EnemyScript : MonoBehaviour
     public Transform player;
 	public GameObject explosion;
 	private float life = 1f;
-	private const float MAX_LIFE = 10f;
-	private const float LIFE_PER_SECOND = 0.3f;
+	public float MAX_LIFE;
+	public float LIFE_PER_SECOND;
 	private static Vector3 DEFAULT_SCALE = new Vector3 (0.5f, -0.5f, 0.5f);
 	private const float MAX_SCALE_FACTOR = 3;
 

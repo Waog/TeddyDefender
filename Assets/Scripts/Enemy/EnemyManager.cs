@@ -3,9 +3,9 @@ using System.Collections;
 
 public class EnemyManager : MonoBehaviour {
 
-	//public PlayerHealth playerHealth;
 	public Transform target;
 	public GameObject enemyTemplate;
+	public GameObject enemyIndicatorTemplate;
 	public float spawnTime = 3f;
 	public Transform[] spawnPoints;
 
@@ -14,13 +14,12 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	void Spawn () {
-	//	if (playerHealth.currentHealth <= 0f) {
-	//		return;
-	//	}
-
 		int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
 		GameObject newEnemy = (GameObject) Instantiate (enemyTemplate, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
 		newEnemy.GetComponent<EnemyScript> ().player = target;
+		GameObject newEnemyIndicator = (GameObject) Instantiate (enemyIndicatorTemplate);
+		newEnemyIndicator.GetComponent<EnemyIndicatorScript> ().enemy = newEnemy.transform;
+		newEnemyIndicator.GetComponent<EnemyIndicatorScript> ().player = target;
 	}
 }
