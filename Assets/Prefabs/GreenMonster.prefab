@@ -28,8 +28,9 @@ GameObject:
   - 50: {fileID: 5015218}
   - 61: {fileID: 6186962}
   - 114: {fileID: 11437800}
+  - 114: {fileID: 11484542}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: GreenMonster
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,11 +294,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8120d3060f2697e4482ec99c2c41dcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  player: {fileID: 0}
   explosion: {fileID: 193540, guid: c5fd52e1a8f4eb945ac4277ff2e435d7, type: 2}
   MAX_LIFE: 10
   LIFE_PER_SECOND: 0.4
+--- !u!114 &11484542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22114b0a16c1d3245850c7498c5c0ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  bed: {fileID: 0}
+  player: {fileID: 0}
 --- !u!212 &21205506
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -525,7 +538,7 @@ Prefab:
       objectReference: {fileID: 193540, guid: c5fd52e1a8f4eb945ac4277ff2e435d7, type: 2}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: MAX_LIFE

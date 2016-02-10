@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 477422}
   - 114: {fileID: 11436764}
   m_Layer: 0
-  m_Name: EnemyManager
+  m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,11 +39,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f105bffe1b0a4a81ab714ca81dae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  player: {fileID: 0}
+  bed: {fileID: 0}
   enemyTemplate: {fileID: 103412, guid: 2371c7a34aa5298468d7ba09dc8f9255, type: 2}
   enemyIndicatorTemplate: {fileID: 161256, guid: e4008625648d00e40ac56f831e1e65f7,
     type: 2}
-  spawnTime: 2.5
+  spawnTime: 4.1
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
