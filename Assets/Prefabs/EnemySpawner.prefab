@@ -41,10 +41,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   bed: {fileID: 0}
-  enemyTemplate: {fileID: 103412, guid: 2371c7a34aa5298468d7ba09dc8f9255, type: 2}
+  enemyTemplate: {fileID: 183506, guid: 46bd2b0d920355c40b4ecac833f2c8b9, type: 2}
   enemyIndicatorTemplate: {fileID: 161256, guid: e4008625648d00e40ac56f831e1e65f7,
     type: 2}
-  spawnTime: 4.1
+  spawnTime: 2.5
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
