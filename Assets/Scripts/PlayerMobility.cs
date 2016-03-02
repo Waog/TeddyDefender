@@ -3,23 +3,18 @@ using System.Collections;
 
 public class PlayerMobility : MonoBehaviour
 {
-
-
 	public float speed;
-	private bool moveAllowed = false;
+	public GameObject targetIndicator;
 
-	private const float CLICK_INTERVAL = 0.3f;
-	private int movingAnimatorParamHash;
-	private bool mouseDownLastFrame = false;
+	const float CLICK_INTERVAL = 0.3f;
+	int movingAnimatorParamHash;
+	GameObject movingGoalIndicator;
+	float lastClickTime;
+	float DOUBLE_CLICK_INTERVAL = .25f;
 
 	void Awake ()
 	{
 		movingAnimatorParamHash = Animator.StringToHash ("Moving");
-	}
-
-	void Update ()
-	{
-
 	}
 
 	bool isEnemyInHitZone ()
@@ -28,44 +23,62 @@ public class PlayerMobility : MonoBehaviour
 		return hitZone.GetComponent<CollidingEnemyCounter> ().isColliding ();
 	}
 
-	void FixedUpdate ()
+	void Update ()
 	{
-		if (Input.GetMouseButton (0)) {
-			lookToMouse ();
-			if (mouseDownLastFrame) {
-				if (isEnemyInHitZone ()) {
-					GetComponent<Animator> ().SetTrigger ("Attack");
-					moveAllowed = false;
-				} else {
-					moveAllowed = true;
-				}
-			}
+		if (Input.GetMouseButtonUp (0) && ! isAttackAnimationPlaying()) {
 
-			if (moveAllowed) {
-				GetComponent<Rigidbody2D> ().AddForce (gameObject.transform.up * speed);
+			if (Time.time - lastClickTime < DOUBLE_CLICK_INTERVAL) {
+				// double click
+				if (movingGoalIndicator) {
+					Destroy (movingGoalIndicator);
+				}
+
+				GetComponent<Animator> ().SetTrigger ("Attack");
+
+			} else {
+				// single click
+				if (movingGoalIndicator) {
+					Destroy (movingGoalIndicator);
+				}
+
+				Vector3 clickPositionOnFloor = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				clickPositionOnFloor.z = 0;
+				movingGoalIndicator = (GameObject)Instantiate (targetIndicator, clickPositionOnFloor, Quaternion.identity);
 			}
+			lastClickTime = Time.time;
 		}
+
+		if (isAttackAnimationPlaying()) {
+			GetComponent<Rigidbody2D> ().AddForce (gameObject.transform.up * speed * 1.6f);
+		}
+
+		if (movingGoalIndicator != null) {
+			lookToTargetIndicator ();
+			GetComponent<Rigidbody2D> ().AddForce (gameObject.transform.up * speed);
+		}
+			
 		GetComponent<Animator> ().SetBool (movingAnimatorParamHash,
 			GetComponent<Rigidbody2D> ().velocity.magnitude > 0.1);
 		GetComponent<Rigidbody2D> ().angularVelocity = 0;
+	}
 
-		if (Input.GetMouseButtonDown (0)) {
-			//|| (Input.touchCount > 0 && Input.GetTouch(0).phase.Equals(TouchPhase.Began))) {
-			lookToMouse ();
-			mouseDownLastFrame = true;
-		} else {
-			mouseDownLastFrame = false;
+	void lookToTargetIndicator ()
+	{
+		Quaternion rot = Quaternion.LookRotation (Vector3.forward, movingGoalIndicator.transform.position - transform.position);
+		transform.rotation = rot;
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.CompareTag("TargetIndicator")) {
+			if (movingGoalIndicator) {
+				Destroy (movingGoalIndicator);
+				movingGoalIndicator = null;
+			}
 		}
 	}
 
-	void lookToMouse ()
-	{
-		var mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		Quaternion rot = Quaternion.LookRotation (transform.position - mousePosition, Vector3.forward);
-		transform.rotation = rot;
-		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z);
-
-//		Vector3 teddyToMouse = mousePosition - transform.position;
-//		GetComponent<Rigidbody2D> ().MoveRotation(- Mathf.Rad2Deg * Mathf.Atan2(teddyToMouse.x, teddyToMouse.y));
+	bool isAttackAnimationPlaying() {
+		int attackLayerIndex = GetComponent<Animator> ().GetLayerIndex ("AttackLayer");
+		return GetComponent<Animator> ().GetCurrentAnimatorStateInfo (attackLayerIndex).IsName ("Attack");
 	}
 }
