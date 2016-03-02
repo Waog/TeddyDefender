@@ -32,7 +32,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &119710
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,7 +45,6 @@ GameObject:
   - 61: {fileID: 6166158}
   - 114: {fileID: 11454340}
   - 95: {fileID: 9552054}
-  - 114: {fileID: 11436082}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -371,19 +370,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11436082
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b45291e3792f904a859a3e8d484b9db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WorldBounds: {fileID: 0}
-  ObjectBounds: {fileID: 6166158}
 --- !u!114 &11444164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,7 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540776edcd7b909428f2d0a65066820d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 70
+  speed: 100
   targetIndicator: {fileID: 188150, guid: a2725e7593aca344399fe717cb570390, type: 2}
 --- !u!212 &21219888
 SpriteRenderer:

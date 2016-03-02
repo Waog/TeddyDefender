@@ -9,7 +9,8 @@ public class PlayerMobility : MonoBehaviour
 	const float CLICK_INTERVAL = 0.3f;
 	int movingAnimatorParamHash;
 	GameObject movingGoalIndicator;
-
+	float lastClickTime;
+	float DOUBLE_CLICK_INTERVAL = .25f;
 
 	void Awake ()
 	{
@@ -24,14 +25,31 @@ public class PlayerMobility : MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetMouseButtonUp (0)) {
-			if (movingGoalIndicator) {
-				Destroy (movingGoalIndicator);
-			}
+		if (Input.GetMouseButtonUp (0) && ! isAttackAnimationPlaying()) {
 
-			Vector3 clickPositionOnFloor = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			clickPositionOnFloor.z = 0;
-			movingGoalIndicator = (GameObject)Instantiate (targetIndicator, clickPositionOnFloor, Quaternion.identity);
+			if (Time.time - lastClickTime < DOUBLE_CLICK_INTERVAL) {
+				// double click
+				if (movingGoalIndicator) {
+					Destroy (movingGoalIndicator);
+				}
+
+				GetComponent<Animator> ().SetTrigger ("Attack");
+
+			} else {
+				// single click
+				if (movingGoalIndicator) {
+					Destroy (movingGoalIndicator);
+				}
+
+				Vector3 clickPositionOnFloor = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				clickPositionOnFloor.z = 0;
+				movingGoalIndicator = (GameObject)Instantiate (targetIndicator, clickPositionOnFloor, Quaternion.identity);
+			}
+			lastClickTime = Time.time;
+		}
+
+		if (isAttackAnimationPlaying()) {
+			GetComponent<Rigidbody2D> ().AddForce (gameObject.transform.up * speed * 1.6f);
 		}
 
 		if (movingGoalIndicator != null) {
@@ -57,5 +75,10 @@ public class PlayerMobility : MonoBehaviour
 				movingGoalIndicator = null;
 			}
 		}
+	}
+
+	bool isAttackAnimationPlaying() {
+		int attackLayerIndex = GetComponent<Animator> ().GetLayerIndex ("AttackLayer");
+		return GetComponent<Animator> ().GetCurrentAnimatorStateInfo (attackLayerIndex).IsName ("Attack");
 	}
 }

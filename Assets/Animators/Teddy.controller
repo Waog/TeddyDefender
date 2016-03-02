@@ -22,7 +22,7 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Base Layer
+    m_Name: BaseLayer
     m_StateMachine: {fileID: 110784308}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -34,7 +34,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: Attack Layer
+    m_Name: AttackLayer
     m_StateMachine: {fileID: 110784884}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -239,7 +239,7 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Base Layer
+  m_Name: BaseLayer
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110249768}
@@ -263,7 +263,7 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Attack Layer
+  m_Name: AttackLayer
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110296494}

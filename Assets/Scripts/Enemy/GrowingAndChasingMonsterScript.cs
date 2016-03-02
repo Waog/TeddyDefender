@@ -8,6 +8,7 @@ public class GrowingAndChasingMonsterScript : EnemyScript
 	private float life = 1f;
 	public float MAX_LIFE;
 	public float LIFE_PER_SECOND;
+	public float RECOIL_DISTANCE = 0.5f;
 
 	private EnemyVariablesScript vars;
 	private Transform target;
@@ -49,7 +50,7 @@ public class GrowingAndChasingMonsterScript : EnemyScript
 			Destroy (gameObject);
 			Instantiate (explosion, transform.position, Quaternion.identity);
 		} else {
-			transform.position += (transform.position - target.position).normalized * 1;
+			transform.position += (transform.position - target.position).normalized * RECOIL_DISTANCE;
 		}
 	}
 }
