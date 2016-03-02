@@ -1795,6 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverAnimator: {fileID: 871168480}
+  sceneTimer: {fileID: 1864037028}
 --- !u!1 &1973504089
 GameObject:
   m_ObjectHideFlags: 0

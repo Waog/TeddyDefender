@@ -4,6 +4,7 @@ using System.Collections;
 public class AwakeKidScript : MonoBehaviour {
 
 	public Animator gameOverAnimator;
+	public SceneTimer sceneTimer;
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
@@ -11,6 +12,7 @@ public class AwakeKidScript : MonoBehaviour {
 			//other.gameObject.GetComponent<EnemyScript> ().takeHit ();
 			//AwakeGameOverWidget.SetActive(true);
 			gameOverAnimator.SetTrigger("GameOver");
+			sceneTimer.freezeTimer ();
 		}
 	}
 }
