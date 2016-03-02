@@ -1126,7 +1126,6 @@ GameObject:
   - 114: {fileID: 871168477}
   - 114: {fileID: 871168476}
   - 95: {fileID: 871168480}
-  - 114: {fileID: 871168481}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1225,17 +1224,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &871168481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 871168475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a2187beefb6af48abc54ca529ea00b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1003750633
 Prefab:
   m_ObjectHideFlags: 0
@@ -1297,7 +1285,7 @@ Prefab:
       objectReference: {fileID: 1729124851}
     - target: {fileID: 115202, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
       propertyPath: m_Name
-      value: RedMonsterSpawner
+      value: GhostSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 11436764, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
       propertyPath: spawnTimeStart
@@ -1319,6 +1307,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11436764, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
+      propertyPath: enemyTemplate
+      value: 
+      objectReference: {fileID: 149994, guid: 3316b87af3ab38a4caca43464f363144, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
   m_IsPrefabParent: 0
