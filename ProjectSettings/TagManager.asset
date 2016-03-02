@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - OffscreenIndicatorBounds
+  - LevelBounds
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - 
   - Ignore
-  - 
+  - LevelBounds
   - 
   - 
   - 
