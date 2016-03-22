@@ -2073,6 +2073,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverAnimator: {fileID: 871168480}
   sceneTimer: {fileID: 1864037028}
+  sleepmeter: {fileID: 1615389191}
+  damagePerSecondPerMonster: 0.1
+  regenerationPerSecond: 0.01
 --- !u!1 &1964275503
 GameObject:
   m_ObjectHideFlags: 0
