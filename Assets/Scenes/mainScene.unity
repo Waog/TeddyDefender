@@ -338,7 +338,7 @@ Prefab:
       objectReference: {fileID: 1729124851}
     - target: {fileID: 115202, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
       propertyPath: m_Name
-      value: GreenMonsterSpawner
+      value: EkelwurmSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 115202, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
       propertyPath: m_IsActive
@@ -359,7 +359,7 @@ Prefab:
     - target: {fileID: 11436764, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
       propertyPath: enemyTemplate
       value: 
-      objectReference: {fileID: 103412, guid: 2371c7a34aa5298468d7ba09dc8f9255, type: 2}
+      objectReference: {fileID: 171632, guid: daf966ed1fb14554db05d104119b2ba5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d39c85ed5d286634ca9f9a9160270231, type: 2}
   m_IsPrefabParent: 0
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_MinValue: 0.5
   m_MaxValue: 7
   m_WholeNumbers: 0
-  m_Value: 3
+  m_Value: 4.3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2334,7 +2334,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 4.3
 --- !u!222 &1989844339
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2418,7 +2418,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 4.3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

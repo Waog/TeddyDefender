@@ -31,6 +31,7 @@ public class EnemySpawnerScript : MonoBehaviour {
 		GameObject newEnemyIndicator = (GameObject) Instantiate (enemyIndicatorTemplate);
 		newEnemyIndicator.GetComponent<EnemyIndicatorScript> ().enemy = newEnemy.transform;
 		newEnemyIndicator.GetComponent<EnemyIndicatorScript> ().player = player;
+		newEnemyIndicator.GetComponent<SpriteRenderer> ().sprite = newEnemy.GetComponent<EnemyVariablesScript> ().indicatorIcon;
 
 		Invoke ("Spawn", getSpawnTime ());
 	}

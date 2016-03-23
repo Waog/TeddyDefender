@@ -38,6 +38,6 @@ public class EnemyIndicatorScript : MonoBehaviour
 	void updateAngle ()
 	{
 		Vector3 player2enemy = enemy.position - player.position;
-		transform.eulerAngles = new Vector3 (0, 0, Mathf.Rad2Deg * Mathf.Atan2 (player2enemy.y, player2enemy.x));
+		transform.eulerAngles = new Vector3 (0, 0, Mathf.Rad2Deg * Mathf.Atan2 (player2enemy.y, player2enemy.x) + 90);
 	}
 }

@@ -12,7 +12,7 @@ public class GrowingAndChasingMonsterScript : EnemyScript
 
 	private EnemyVariablesScript vars;
 	private Transform target;
-	private static Vector3 DEFAULT_SCALE = new Vector3 (0.5f, -0.5f, 0.5f);
+	private static Vector3 DEFAULT_SCALE = new Vector3 (0.5f, 0.5f, 0.5f);
 	private const float MAX_SCALE_FACTOR = 3;
 
 	private float getScaleFactor() {
