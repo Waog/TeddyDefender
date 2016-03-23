@@ -165,6 +165,7 @@ MonoBehaviour:
   speed: 4
   bed: {fileID: 0}
   player: {fileID: 0}
+  indicatorIcon: {fileID: 21300000, guid: f65249ef258a5884990e449c496307a2, type: 3}
 --- !u!198 &19887132
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1721,6 +1722,11 @@ Prefab:
       propertyPath: prewarm
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: indicatorIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: f65249ef258a5884990e449c496307a2,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149994}
