@@ -839,7 +839,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 418580, guid: 71582de135aa2aa40a903136cca1968b, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166158, guid: 71582de135aa2aa40a903136cca1968b, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 427550, guid: 71582de135aa2aa40a903136cca1968b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71582de135aa2aa40a903136cca1968b, type: 2}
@@ -2076,6 +2084,35 @@ MonoBehaviour:
   sleepmeter: {fileID: 1615389191}
   damagePerSecondPerMonster: 0.1
   regenerationPerSecond: 0.01
+--- !u!1 &1922176333 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 184552, guid: 71582de135aa2aa40a903136cca1968b, type: 2}
+  m_PrefabInternal: {fileID: 392559890}
+--- !u!114 &1922176336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1922176333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbabcd2e60b496744b0875c6a5dc9849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1922176337
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1922176333}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.42852375, y: 1.300914}
+  serializedVersion: 2
+  m_Size: {x: 2.2207434, y: 2.1709201}
 --- !u!1 &1964275503
 GameObject:
   m_ObjectHideFlags: 0

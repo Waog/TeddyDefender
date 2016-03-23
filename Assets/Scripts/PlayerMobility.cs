@@ -34,6 +34,7 @@ public class PlayerMobility : MonoBehaviour
 				}
 
 				GetComponent<Animator> ().SetTrigger ("Attack");
+				GetComponent<Animator> ().SetTrigger ("Jump");
 
 			} else {
 				// single click
