@@ -11,6 +11,7 @@ public class PlayerMobility : MonoBehaviour
 	GameObject movingGoalIndicator;
 	float lastClickTime;
 	float DOUBLE_CLICK_INTERVAL = .25f;
+	Vector3 attackGoalPosition;
 
 	void Awake ()
 	{
@@ -30,6 +31,7 @@ public class PlayerMobility : MonoBehaviour
 			if (Time.time - lastClickTime < DOUBLE_CLICK_INTERVAL) {
 				// double click
 				if (movingGoalIndicator) {
+					attackGoalPosition = movingGoalIndicator.transform.position;
 					Destroy (movingGoalIndicator);
 				}
 
@@ -50,7 +52,7 @@ public class PlayerMobility : MonoBehaviour
 		}
 
 		if (isAttackAnimationPlaying()) {
-			GetComponent<Rigidbody2D> ().AddForce (gameObject.transform.up * speed * 1.6f);
+			GetComponent<Rigidbody2D> ().AddForce (gameObject.transform.up * speed * 1.6f * Mathf.Clamp01(getDistanceToAttackGoal()));
 		}
 
 		if (movingGoalIndicator != null) {
@@ -81,5 +83,10 @@ public class PlayerMobility : MonoBehaviour
 	bool isAttackAnimationPlaying() {
 		int attackLayerIndex = GetComponent<Animator> ().GetLayerIndex ("AttackLayer");
 		return GetComponent<Animator> ().GetCurrentAnimatorStateInfo (attackLayerIndex).IsName ("Attack");
+	}
+
+	float getDistanceToAttackGoal() {
+		Debug.Log ("Attack distance:" + (attackGoalPosition - transform.position).magnitude);
+		return (attackGoalPosition - transform.position).magnitude;
 	}
 }
