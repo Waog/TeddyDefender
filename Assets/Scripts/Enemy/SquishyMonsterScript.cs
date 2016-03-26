@@ -9,7 +9,7 @@ public class SquishyMonsterScript : EnemyScript
 	bool isDying = false;
 
 	void Start() {
-		initiateIndicator ();
+		init ();
 		vars = GetComponent<EnemyVariablesScript> ();
 	}
 

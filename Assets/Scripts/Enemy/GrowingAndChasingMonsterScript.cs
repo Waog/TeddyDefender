@@ -21,7 +21,7 @@ public class GrowingAndChasingMonsterScript : EnemyScript
 
 
 	void Start() {
-		initiateIndicator ();
+		init ();
 		vars = GetComponent<EnemyVariablesScript> ();
 		target = vars.bed;
 	}
