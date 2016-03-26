@@ -113,6 +113,8 @@ GameObject:
   - 114: {fileID: 11450792}
   - 61: {fileID: 6154066}
   - 114: {fileID: 11466490}
+  - 61: {fileID: 6108202}
+  - 114: {fileID: 11436072}
   m_Layer: 0
   m_Name: schwert
   m_TagString: Untagged
@@ -284,6 +286,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &6108202
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184552}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.42852375, y: 1.300914}
+  serializedVersion: 2
+  m_Size: {x: 2.2207434, y: 2.1709201}
 --- !u!61 &6154066
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -357,6 +373,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11436072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbabcd2e60b496744b0875c6a5dc9849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11448352
 MonoBehaviour:
   m_ObjectHideFlags: 1
