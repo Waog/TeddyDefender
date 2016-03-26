@@ -14,14 +14,10 @@ public class CameraController : MonoBehaviour
 		_min,
 		_max;
 
-	public void Start ()
+	public void Update ()
 	{
 		_min = Bounds.bounds.min;
 		_max = Bounds.bounds.max;
-	}
-
-	public void Update ()
-	{
 
 		var x = getNewX ();
 
