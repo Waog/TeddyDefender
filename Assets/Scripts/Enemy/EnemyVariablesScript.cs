@@ -8,4 +8,5 @@ public class EnemyVariablesScript : MonoBehaviour
 	public Transform bed;
 	public Transform player;
 	public Sprite indicatorIcon;
+	public GameObject enemyIndicatorPrefab;
 }

@@ -255,6 +255,7 @@ MonoBehaviour:
   bed: {fileID: 0}
   player: {fileID: 0}
   indicatorIcon: {fileID: 21300000, guid: 12fa63aa1a714ec49ad8b7b61a693bbc, type: 3}
+  enemyIndicatorPrefab: {fileID: 161256, guid: e4008625648d00e40ac56f831e1e65f7, type: 2}
 --- !u!212 &21205736
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -417,6 +418,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 12fa63aa1a714ec49ad8b7b61a693bbc,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: enemyIndicatorPrefab
+      value: 
+      objectReference: {fileID: 161256, guid: e4008625648d00e40ac56f831e1e65f7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 171632}

@@ -4,7 +4,6 @@
 public class EnemyCountTuple : MonoBehaviour {
 	public GameObject enemy;
 	public int count;
-	public GameObject enemyIndicatorPrefab;
 
 	public void Spawn()
 	{
@@ -22,10 +21,5 @@ public class EnemyCountTuple : MonoBehaviour {
 		GameObject newEnemy = (GameObject) Instantiate (enemy, spawnPoints [spawnPointIndex].transform.position, spawnPoints [spawnPointIndex].transform.rotation);
 		newEnemy.GetComponent<EnemyVariablesScript> ().player = GameObject.FindGameObjectWithTag ("Player").transform;
 		newEnemy.GetComponent<EnemyVariablesScript> ().bed = GameObject.FindGameObjectWithTag ("Bed").transform;
-
-		GameObject newEnemyIndicator = (GameObject)Instantiate(enemyIndicatorPrefab);
-		newEnemyIndicator.GetComponent<EnemyIndicatorScript> ().enemy = newEnemy.transform;
-		newEnemyIndicator.GetComponent<EnemyIndicatorScript> ().player = GameObject.FindGameObjectWithTag ("Player").transform;
-		newEnemyIndicator.GetComponent<SpriteRenderer> ().sprite = newEnemy.GetComponent<EnemyVariablesScript> ().indicatorIcon;
 	}
 }
