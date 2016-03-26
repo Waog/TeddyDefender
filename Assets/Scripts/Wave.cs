@@ -4,12 +4,16 @@
 public class Wave : MonoBehaviour {
 
 	public int pauseBetweenSubwaves = 2;
-	public Subwave[] subwaves;
 
+	private Subwave[] subwaves;
 	private bool running = false;
 	private bool finished = false;
 
 	private int curSubwaveIndex = 0;
+
+	void Start() {
+		subwaves = GetComponentsInChildren<Subwave> ();
+	}
 
 	public void go() {
 		running = true;

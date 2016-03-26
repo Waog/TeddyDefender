@@ -2,9 +2,13 @@
 
 [System.Serializable]
 public class Subwave : MonoBehaviour {
-	public EnemyCountTuple[] enemyCountTuples;
 
+	private EnemyCountTuple[] enemyCountTuples;
 	private bool released = false;
+
+	void Start() {
+		enemyCountTuples = GetComponentsInChildren<EnemyCountTuple> ();
+	}
 
 	public void go()
 	{
