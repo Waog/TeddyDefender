@@ -8,6 +8,8 @@ TagManager:
   - OffscreenIndicatorBounds
   - LevelBounds
   - TargetIndicator
+  - Bed
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

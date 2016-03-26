@@ -86,7 +86,7 @@ public class PlayerMobility : MonoBehaviour
 	}
 
 	float getDistanceToAttackGoal() {
-		Debug.Log ("Attack distance:" + (attackGoalPosition - transform.position).magnitude);
+//		Debug.Log ("Attack distance:" + (attackGoalPosition - transform.position).magnitude);
 		return (attackGoalPosition - transform.position).magnitude;
 	}
 }
