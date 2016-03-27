@@ -5,6 +5,11 @@ public class EnemyCountTuple : MonoBehaviour {
 	public GameObject enemy;
 	public int count;
 
+	public EnemyCountTuple(GameObject enemy, int count) {
+		this.enemy = enemy;
+		this.count = count;
+	}
+
 	public void Spawn()
 	{
 		for (int enemyIndex = 0; enemyIndex < count; enemyIndex++) {

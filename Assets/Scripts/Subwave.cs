@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
 
 [System.Serializable]
 public class Subwave : MonoBehaviour {
 
-	private EnemyCountTuple[] enemyCountTuples;
+	private List<EnemyCountTuple> enemyCountTuples;
 	private bool released = false;
 
 	void Start() {
-		enemyCountTuples = GetComponentsInChildren<EnemyCountTuple> ();
+		enemyCountTuples = GetComponentsInChildren<EnemyCountTuple> ().OfType<EnemyCountTuple> ().ToList ();
 	}
 
 	public void go()
@@ -20,5 +22,9 @@ public class Subwave : MonoBehaviour {
 
 	public bool wasReleased() {
 		return released;
+	}
+
+	public void add(EnemyCountTuple enemyCountTuple) {
+		enemyCountTuples.Add (enemyCountTuple);
 	}
 }
